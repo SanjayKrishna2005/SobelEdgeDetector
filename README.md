@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project implements a fully synthesizable Sobel edge detection algorithm using Verilog HDL, suitable for FPGA deployment on platforms such as the Xilinx Spartan-7. The design uses a custom-built approximate signed multiplier to significantly reduce power consumption, while maintaining edge detection accuracy. It is capable of detecting edges from 8-bit grayscale images in real-time.
+This project implements a fully synthesizable Sobel edge detection algorithm using Verilog HDL, suitable for FPGA deployment. The design uses a custom-built approximate unsigned multiplier to significantly reduce power & area consumption , while maintaining edge detection accuracy. It is capable of detecting edges from 8-bit grayscale images in real-time.
 
 ---
 
@@ -12,9 +12,9 @@ The project is built using a modular RTL architecture consisting of the followin
 
 - `pixel_window_generator.v` – Generates a 3×3 pixel window using FIFOs and shift registers  
 - `sobel_core.v` – Computes Gx and Gy gradients, absolute values, and applies thresholding  
-- `Adder_16bit.v` – Custom structural adder (CSA or RCA based)  
+- `Adder_16bit.v` – Custom structural adder (Carry Select Adder)  
 - `AppMul_8bitSigned.v` – Approximate unsigned multiplier for power-aware convolution  
-- `line_buffer.v` – FIFO-based scanline buffering  
+- `line_buffer.v` – FIFO-based scanline buffering
 - `tb_sobel_image.v` – Testbench for simulating full image-based pipeline  
 - **MATLAB Scripts** – For image preprocessing and output visualization  
 
@@ -23,19 +23,18 @@ The project is built using a modular RTL architecture consisting of the followin
 ## ✨ Features
 
 - Modular, synthesizable Verilog design  
-- Uses approximate signed multipliers to reduce dynamic power  
-- Fully pipelined 3×3 Sobel edge detection core (Gx, Gy)  
+- Uses approximate unsigned multipliers to reduce dynamic power  
+- Fully working 3×3 Sobel edge detection core (Gx, Gy)  
 - Threshold-based binary edge map generation  
 - Pixel window generation using FIFOs and shift registers  
-- Simulation testbench with image input/output support  
-- MATLAB integration for pre/post-processing  
+- Simulation testbench with image input/output support   
 - Support for 256×256 grayscale images  
 
 ---
 
 ## 🎯 Advantages & Perks
 
-- Reduces overall on-chip power by using approximate logic in arithmetic blocks  
+- Reduces overall on-chip power & utilization by using approximate logic in arithmetic blocks  
 - Flexible design: change threshold, kernels, or multipliers easily  
 - Improves hardware efficiency by replacing standard multipliers with approximate units  
 - RTL-level image processing pipeline is useful for learning and prototyping  
