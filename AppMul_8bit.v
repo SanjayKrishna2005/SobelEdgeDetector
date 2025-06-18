@@ -1,7 +1,7 @@
 module AppMul_8bit(S,a,b);
 input [7:0] a,b;
 output [15:0] S;
-
+ 
 wire [7:0]p[7:0];
 	// Partial Products
    	and and_gate0  (p[0][0], b[0], a[0]);
