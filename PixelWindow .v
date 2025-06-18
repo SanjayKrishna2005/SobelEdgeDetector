@@ -12,7 +12,7 @@ module pixel_window_generator #(
     output reg valid_data,
     output reg black_data
 );
- 
+  
     // 2 line buffers
     reg [7:0] line1 [0:IMG_WIDTH-1];
     reg [7:0] line2 [0:IMG_WIDTH-1];
