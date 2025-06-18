@@ -3,7 +3,7 @@ module sobel_core (
     input wire valid_data, black_data,
     input wire [7:0] Z1, Z2, Z3, Z4, Z5, Z6, Z7, Z8, Z9,
     output reg [7:0] pixel_data_out
-);
+); 
     
     wire [15:0] P1,P2,P3,P4,P5,P6,P7,P8,P9;
     integer gx,gy,g;
