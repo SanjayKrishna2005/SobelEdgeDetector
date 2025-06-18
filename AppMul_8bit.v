@@ -138,24 +138,6 @@ assign S[4] = sac[3];
 assign S[15:5] = X + Y;
 endmodule
 
-//Approximate Compressor 1
-module ap_comp1(S,C,x4,x3,x2,x1);
-output S,C;
-input x4,x3,x2,x1;
-
-assign S = x3|x2|x1;
-assign C = x4;
-endmodule
-
-//Approximate Compressor 2
-module ap_comp2(S,C,x4,x3,x2,x1);
-output S,C;
-input x4,x3,x2,x1;
-
-assign S = x2&x1;
-assign C = x4|x3;
-endmodule
-
 // Conventional 4:2 Compressor
 module ex_comp(Sum,Carry,Cout,Cin,x4,x3,x2,x1);
 input Cin,x4,x3,x2,x1;
