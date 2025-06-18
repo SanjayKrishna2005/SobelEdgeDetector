@@ -8,7 +8,7 @@ module sobel_top #(
     output [7:0] edge_out,
     output edge_valid
 );
-
+ 
     wire [7:0] Z1, Z2, Z3, Z4, Z5, Z6, Z7, Z8, Z9;
     wire valid_data, black_data;
 
