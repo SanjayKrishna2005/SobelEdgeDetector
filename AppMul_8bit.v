@@ -103,6 +103,9 @@ ap_comp2 A2comp1(sac2_[1],cac2_[1],p[0][7],p[1][6],p[2][5],p[3][4]);
 ap_comp2 A2comp2(sac2_[2],cac2_[2],p[4][3],p[5][2],p[6][1],p[7][0]);
 ap_comp2 A2comp3(sac2_[3],cac2_[3],sac2_[1],sac2_[2],cac[2],ch[2]);
 
+
+// USE ANY DESIRABLE APPROXIMATE COMPRESSORS FOR ap_comp1 & ap_comp2
+	
 //Error Correction Module
 wire E1,E2,E3;
 assign E1 = 1'b0;
