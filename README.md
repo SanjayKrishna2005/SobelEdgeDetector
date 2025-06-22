@@ -14,7 +14,6 @@ The project is built using a modular RTL architecture consisting of the followin
 - `sobel_core.v` – Computes Gx and Gy gradients, absolute values, and applies thresholding  
 - `Adder_16bit.v` – Custom structural adder (Carry Select Adder)  
 - `AppMul_8bit.v` – Approximate unsigned multiplier for power-aware convolution  
-- `line_buffer.v` – FIFO-based scanline buffering
 - `tb_sobel_image.v` – Testbench for simulating full image-based pipeline  
 - **MATLAB Scripts** – For image preprocessing and output visualization  
 
